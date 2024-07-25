@@ -1,7 +1,7 @@
 class Vehicle:
-    __COLOR_VARIANTS = ['black', 'silver', 'red', 'blue', 'green']
+    __COLOR_VARIANTS = ['blue', 'red', 'green', 'black', 'white']
 
-    def __init__(self, owner, model, engine_power, color):
+    def __init__(self, owner, model, color, engine_power):
         self.owner = owner
         self.__model = model
         self.__engine_power = engine_power
@@ -32,11 +32,8 @@ class Vehicle:
 class Sedan(Vehicle):
     __PASSENGERS_LIMIT = 5
 
-    def __init__(self, owner, model, engine_power, color):
-        super().__init__(owner, model, engine_power, color)
 
-
-vehicle1 = Sedan('Fedos', 'Toyota Mark II', 500, 'blue')
+vehicle1 = Sedan('Fedos', 'Toyota Mark II', 'blue', 500)
 
 # Изначальные свойства
 vehicle1.print_info()
